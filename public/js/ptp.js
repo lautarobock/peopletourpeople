@@ -4,16 +4,7 @@
     
     ptp.controller("MainController",function($scope,Person) {
         $scope.$on('fbdata',function(event,args) {
-            console.log(args);
-            //Person.save(args, function(data) {
-            //    console.log(data);
-            //});
-            var person = Person.findByFb({fb_id:args.id},function(data) {
-                console.log(person);
-                person.lastName = args.last_name;
-                person.$save();
-            });
-            
+            $scope.me = Person.findByFb({fb_id:args.id});
         });
     });
     

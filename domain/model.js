@@ -8,7 +8,8 @@ exports.Person = mongoose.model("Person",new Schema({
     name: String,
     lastName: String,
     bornDate: Date,
-    picture: String
+    picture: String,
+    fb_id: String
 }));
 
 

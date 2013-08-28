@@ -39,7 +39,7 @@ var person = require("./routes/person.js");
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/person/fb:id',person.findByFb);
-app.put('/person/fb:id',person.updateByFb);
+//app.put('/person/fb:id',person.updateByFb);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
